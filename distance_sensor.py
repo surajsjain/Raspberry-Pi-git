@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 import time
 
 GPIO.setmode(GPIO.BCM)
-GIPO.setwarnings(False)
+GPIO.setwarnings(False)
 
 trig=4
 echo=18
