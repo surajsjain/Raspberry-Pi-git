@@ -28,6 +28,5 @@ while(True):
     distance= sig_time/0.000058
     time.sleep(0.5)
     print "distance"+str(distance)
-    GPIO.cleanup()
 
 GPIO.cleanup()
