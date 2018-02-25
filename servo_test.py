@@ -8,5 +8,5 @@ pwm.start(5)
 for x in range (0,7):
     pwm.ChangeDutyCycle(x)
     time.sleep(0.5)
-GPIO.cleanup()
+gpio.cleanup()
 pwm.stop
