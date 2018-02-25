@@ -3,16 +3,6 @@ import time
 
 GPIO.setmode(GPIO.BCM)
 
-def SetAngle(angle):
-    GPIO.setup(07, GPIO.OUT)
-    servo=GPIO.PWM(07, 50)
-    servo.start(2.0)
-
-    duty = angle / 18 + 2
-	GPIO.output(07, True)
-	servo.ChangeDutyCycle(duty)
-	sleep(1)
-	GPIO.output(07, False)
-	pwm.ChangeDutyCycle(0)
-
-SetAngle(90)
+GPIO.setup(07, GPIO.OUT)
+servo=GPIO.PWM(07, 50)
+servo.start(2.0)
