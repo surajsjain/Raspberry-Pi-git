@@ -3,6 +3,10 @@ import RPi.GPIO as gpio
 gpio.setwarnings(False)
 gpio.setmode(gpio.BOARD)
 gpio.setup(7,gpio.OUT)
+gpio.output(7, True)
+time.sleep(0.0015)
+gpio.output(7, False)
+'''
 pwm = gpio.PWM(7,100)
 pwm.start(2.5)
 def change(k):
@@ -18,3 +22,4 @@ except KeyboardInterrupt:
     pwm.stop()
     gpio.cleanup()
     exit
+'''
