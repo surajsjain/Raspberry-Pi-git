@@ -10,9 +10,9 @@ echo=18
 GPIO.setup(trig, GPIO.OUT)
 GPIO.setup(echo, GPIO.IN)
 
-print "Enter 1 to stop the program"
 while(True):
-
+    start;
+    end;
     GPIO.output(trig, True)
     time.sleep(0.0001)
     GPIO.output(trig, False)
