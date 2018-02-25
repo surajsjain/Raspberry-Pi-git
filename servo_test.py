@@ -5,4 +5,4 @@ GPIO.setmode(GPIO.BCM)
 
 GPIO.setup(07, GPIO.OUT)
 servo=GPIO.PWM(07, 50)
-servo.start(2.0)
+servo.ChangeDutyCycle(50)
