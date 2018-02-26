@@ -1,5 +1,3 @@
-'''
-
 import RPi.GPIO as GPIO
 import time
 
@@ -10,9 +8,10 @@ GPIO.setup(17, GPIO.OUT)
 servo=GPIO.PWM(17, 50)
 servo.start(5)
 servo.ChangeDutyCycle(2)
+servo.stop()
+GPIO.cleanup()
 
 '''
-
 # This gives us control of the Raspberry Pi's pins.
 import RPi.GPIO as GPIO
 
@@ -81,3 +80,4 @@ pwm.stop()
 # close on all GPIO stuff.  There's only one copy of real hardware.
 # We need to be polite and put it back the way we found it.
 GPIO.cleanup()
+'''
