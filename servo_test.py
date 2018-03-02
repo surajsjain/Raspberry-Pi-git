@@ -1,3 +1,6 @@
+
+########## Program 1 ###########
+'''
 import RPi.GPIO as GPIO
 import time
 
@@ -12,6 +15,9 @@ servo.ChangeDutyCycle(7.5)
 servo.stop()
 GPIO.cleanup()
 
+'''
+
+########## Program 2 ###########
 '''
 # This gives us control of the Raspberry Pi's pins.
 import RPi.GPIO as GPIO
@@ -83,9 +89,9 @@ pwm.stop()
 GPIO.cleanup()
 '''
 
-#####Program 2########
+##### Program 3 ########
 
-'''
+
 import RPi.GPIO as GPIO
 import time
 
@@ -100,12 +106,11 @@ p.start(7.5)
 try:
         while True:
 		p.ChangeDutyCycle(7.5)  # turn towards 90 degree
-		time.sleep(1) # sleep 1 second
+		time.sleep(3)
 		p.ChangeDutyCycle(2.5)  # turn towards 0 degree
-		time.sleep(1) # sleep 1 second
+		time.sleep(3)
 		p.ChangeDutyCycle(12.5) # turn towards 180 degree
-                time.sleep(1) # sleep 1 second
+        time.sleep(3)
 except KeyboardInterrupt:
 	p.stop()
         GPIO.cleanup()
-'''
