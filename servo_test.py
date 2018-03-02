@@ -6,9 +6,9 @@ GPIO.setwarnings(False)
 
 GPIO.setup(17, GPIO.OUT)
 servo=GPIO.PWM(17, 50)
-servo.start(5)
+servo.start(3)
 time.sleep(3)
-servo.ChangeDutyCycle(3)
+servo.ChangeDutyCycle(7.5)
 servo.stop()
 GPIO.cleanup()
 
