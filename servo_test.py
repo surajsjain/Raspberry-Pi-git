@@ -91,11 +91,12 @@ GPIO.cleanup()
 
 ##### Program 3 ########
 
-
+'''
 import RPi.GPIO as GPIO
 import time
 
 GPIO.setmode(GPIO.BCM)
+
 GPIO.setup(17, GPIO.OUT)
 
 p = GPIO.PWM(17, 50)
@@ -109,3 +110,23 @@ p.ChangeDutyCycle(2.5)  # turn towards 0 degree
 time.sleep(3)
 p.ChangeDutyCycle(12.5) # turn towards 180 degree
 time.sleep(3)
+'''
+
+##### Final Program ########
+
+import RPi.GPIO as GPIO
+import time
+
+GPIO.setmode(GPIO.BCM)
+
+def servo(pin, angle):
+	GPIO.setup(pin, GPIO.OUT)
+	pwm=GPIO.PWM(pin, 50)
+	p=angle*0.055555
+	p=p+2.5
+	pwm.start(p)
+	time.sleep(0.25)
+	pwm.stop()
+
+servo(17, 90)
+GPIO.cleanup()
