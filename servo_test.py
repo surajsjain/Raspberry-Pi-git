@@ -128,5 +128,6 @@ def servo(pin, angle):
 	time.sleep(0.25)
 	pwm.stop()
 
-servo(17, 90)
+ang=input("Enter the angle: ")
+servo(17, ang)
 GPIO.cleanup()
