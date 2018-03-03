@@ -96,21 +96,16 @@ import RPi.GPIO as GPIO
 import time
 
 GPIO.setmode(GPIO.BOARD)
-servo_pin=17
-GPIO.setup(servo_pin, GPIO.OUT)
+GPIO.setup(17, GPIO.OUT)
 
-p = GPIO.PWM(servo_pin, 50)
+p = GPIO.PWM(17, 50)
 
 p.start(7.5)
 
-try:
-        while True:
-		p.ChangeDutyCycle(7.5)  # turn towards 90 degree
-		time.sleep(3)
-		p.ChangeDutyCycle(2.5)  # turn towards 0 degree
-		time.sleep(3)
-		p.ChangeDutyCycle(12.5) # turn towards 180 degree
-        time.sleep(3)
-except KeyboardInterrupt:
-	p.stop()
-        GPIO.cleanup()
+
+p.ChangeDutyCycle(7.5)  # turn towards 90 degree
+time.sleep(3)
+p.ChangeDutyCycle(2.5)  # turn towards 0 degree
+time.sleep(3)
+p.ChangeDutyCycle(12.5) # turn towards 180 degree
+time.sleep(3)
